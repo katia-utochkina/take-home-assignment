@@ -1,5 +1,11 @@
-import './App.css';
 import React from "react";
+import './App.css';
+
+const defaultInput = {
+  value: "Here is some example text.",
+  textCase: "",
+};
+
 
 function App() {
   const [textInput, setTextInput] = React.useState('Here is some example text.');
