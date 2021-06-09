@@ -8,7 +8,7 @@ const defaultInput = {
 
 
 function App() {
-  const [textInput, setTextInput] = React.useState('Here is some example text.');
+  const [textInput, setTextInput] = React.useState(defaultInput);
   const [textOutput, setTextOutput] = React.useState('');
 
   const handleChange = event => {
