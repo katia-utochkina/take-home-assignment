@@ -25,15 +25,18 @@ function App() {
       <header>
         <h1>Career Lab | Take-Home Assignment</h1>
       </header>
+
+      <main> 
       <form onSubmit={handleSubmit}>
         <label>
-          <textarea onChange={handleChange} value={textInput}/>
+        <textarea id="value" name="value" onChange={handleChange} value={textInput.value} required />
         </label>
         <input type="submit" value="Submit"/>
       </form>
       <div id="result">
         {textOutput}
       </div>
+      </main>
     </div>
   );
 }
