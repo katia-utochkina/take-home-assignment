@@ -27,7 +27,7 @@ function App() {
       </header>
 
       <main> 
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <label>
         <textarea id="value" name="value" onChange={handleChange} value={textInput.value} required />
         </label>
