@@ -28,12 +28,24 @@ function App() {
 
       <main> 
       <form className="form" onSubmit={handleSubmit}>
-      
+
       <div className="form-group">
         <label>
         <textarea id="value" name="value" onChange={handleChange} value={textInput.value} required />
         </label>
       </div>
+
+      <div className="form-group">
+            <label htmlFor="textCase">Preferred Mode</label>
+            <div className="form-field select">
+              <select id="textCase" name="textCase" onChange={handleChange} value={textInput.textCase}>
+                <option value="">None Selected</option>
+                <option value="lowercase">Lowercase</option>
+                <option value="uppercase">Uppercase</option>
+              </select>
+              <span className="focus"></span>
+            </div>
+          </div>
 
         <input type="submit" value="Submit"/>
       </form>
