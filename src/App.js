@@ -28,9 +28,13 @@ function App() {
 
       <main> 
       <form className="form" onSubmit={handleSubmit}>
+      
+      <div className="form-group">
         <label>
         <textarea id="value" name="value" onChange={handleChange} value={textInput.value} required />
         </label>
+      </div>
+
         <input type="submit" value="Submit"/>
       </form>
       <div id="result">
