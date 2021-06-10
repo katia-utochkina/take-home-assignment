@@ -46,8 +46,7 @@ function App() {
               <span className="focus"></span>
             </div>
           </div>
-
-        <input type="submit" value="Submit"/>
+            <button type="submit">Submit</button> 
       </form>
       <div id="result">
         {textOutput}
