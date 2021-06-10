@@ -17,9 +17,19 @@ function App() {
     });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setTextOutput("Your formatted text will go here!");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    switch (textInput.textCase) {
+      case "uppercase":
+        setTextOutput(textInput.value.toUpperCase());
+        break;
+      case "lowercase":
+        setTextOutput(textInput.value.toLowerCase());
+        break;
+      default:
+        setTextOutput(textInput.value);
+        break;
+    }
   };
 
   return (
