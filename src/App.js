@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 const defaultInput = {
@@ -6,14 +6,14 @@ const defaultInput = {
   textCase: "",
 };
 
-function App() {
-  const [textInput, setTextInput] = React.useState(defaultInput);
-  const [textOutput, setTextOutput] = React.useState("");
+const App = () => {
+  const [textInput, setTextInput] = useState(defaultInput);
+  const [textOutput, setTextOutput] = useState("");
 
-  const handleChange = (event) => {
+  const handleChange = (e) => {
     setTextInput({
       ...textInput,
-      [event.target.name]: event.target.value,
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -37,7 +37,6 @@ function App() {
       <header>
         <h1>Career Lab | Take-Home Assignment</h1>
       </header>
-
       <main>
         <form className="form" onSubmit={handleSubmit}>
           <div className="form-group">
@@ -45,7 +44,6 @@ function App() {
               <textarea id="value" name="value" onChange={handleChange} value={textInput.value} required />
             </label>
           </div>
-
           <div className="form-group">
             <label htmlFor="textCase">Preferred Mode</label>
             <div className="form-field select">
@@ -63,6 +61,6 @@ function App() {
       </main>
     </div>
   );
-}
+};
 
 export default App;
